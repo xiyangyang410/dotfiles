@@ -1,11 +1,24 @@
+encryption = "age"
+[age]
+    identity = "Documents/AppConf/chezmoi/ageKey"
+    recipient = "age1rj6mw5dseznwnzqcg42graut2efw725wr0yjjx5qdsjzvqxmwgqqhhag43"
+
 [edit]
     command = "nvim"
 
 [diff]
     command = "nvim"
-    args = ["-dR", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }}  .Target {{ "}}" }}"]
+    args = [
+      "-d",
+      {{ printf "%q" "{{ .Destination }}" }},
+      {{ printf "%q" "{{ .Target }}" }},
+    ]
 
 [merge]
     command = "nvim"
-    args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
-
+    args = [
+      "-d",
+      {{ printf "%q" "{{ .Destination }}" }},
+      {{ printf "%q" "{{ .Source }}" }},
+      {{ printf "%q" "{{ .Target }}" }},
+    ]

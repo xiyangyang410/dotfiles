@@ -1,0 +1,9 @@
+[user]
+	name = Brahming Wu
+	email = brahmingwu@outlook.com
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+[mergetool]
+	prompt = true

@@ -1,0 +1,80 @@
+patch:
+  style/candidate_list_layout: linear # stacked | linear
+  style/font_face: "霞鹜文楷,Fira Code"
+  style/font_point: 36
+  style/shadow_size: 10
+  style/label_font_face: "Fira Code"
+  style/label_font_point: 26
+  style/alpha: 0.85
+  style/inline_preedit: true
+  style/inline_candidate: false
+  style/spacing: 0
+  style/line_length: 0
+  style/line_spacing: 0
+  style/base_offset: 0
+  style/show_paging: true
+  style/corner_radius: 20
+  style/hilited_corner_radius: 18
+  style/comment_font_face: "PingFang SC"
+  style/comment_font_point: 18
+  style/translucency: true
+  style/mutual_exclusive: false
+  style/surrounding_extra_expansion: 0 # 候选项背景相对大小？
+  style/border_height: 0 # 外边框 高
+  style/border_width: 0 # 外边框 宽
+
+  style/color_scheme: purity_of_essence_light
+  style/color_scheme_dark: purity_of_form_dark
+
+  preset_color_schemes/purity_of_form_dark:
+    name: "純粹的形式／Purity of Form Light"
+    author: 雨過之後、佛振
+    # 如果将字体设置为 PingFangSC-Regular
+    # 会让 🈶🈚️🉑🈲🉐 这几个 Emoji 失去彩色效果，留空反而可以显示。。。
+    # font_face: ""                   # 字体及大小
+    # font_point: 18
+    # label_font_face: "Helvetica"    # 序号字体及大小
+    # label_font_point: 12
+    # comment_font_face: "Helvetica"  # 注字体及大小
+    # comment_font_point: 16
+    # candidate_list_layout: stacked        # 候选项排列方向 stacked(默认) | linear
+    # text_orientation: horizontal          # 文字排列方向 horizontal(默认) | vertical
+    # inline_preedit: true                    # 键入码（拼音）是否显示在键入位置 true | false
+    # inline_candidate: false                 # 候选项（词句）是否显示在键入位置 true | false
+    # translucency: true                      # 磨砂： true | false
+    # mutual_exclusive: false                 # 色不叠加： true | false
+    # corner_radius: 10                       # 外边框 圆角半径
+    # hilited_corner_radius: 10               # 选中框 圆角半径
+    surrounding_extra_expansion: 0 # 候选项背景相对大小？
+    # shadow_size: 10                         # 阴影大小
+    # line_spacing: 5                         # 行间距
+    base_offset: 0 # 字基高
+    # alpha: 0.9                              # 透明度，0~1
+    # spacing: 10                            # 拼音与候选项之间的距离 （inline_preedit: false）
+    color_space: srgb # 色彩空间： srgb | display_p3
+    back_color: 0x545554 # 底色
+    hilited_candidate_back_color: 0xE3E3E3 # 选中底色
+    label_color: 0xBBBBBB # 序号颜色
+    hilited_candidate_label_color: 0x4C4C4C # 选中序号颜色
+    candidate_text_color: 0xEEEEEE # 文字颜色
+    hilited_candidate_text_color: 0x000000 # 选中文字颜色
+    comment_text_color: 0x808080 # 注颜色
+    hilited_comment_text_color: 0x808080 # 选中注颜色
+    text_color: 0x808080 # 拼音颜色 （inline_preedit: false）
+    hilited_text_color: 0xEEEEEE # 选中拼音颜色 （inline_preedit: false）
+    # candidate_back_color:                 # 候选项底色
+    # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+    # hilited_back_color:                   # 选中拼音底色 （inline_preedit: false）
+    # border_color:                         # 外边框颜色
+
+  preset_color_schemes/purity_of_essence_light:
+    name: 純粹的本質／Purity of Essence Light
+    author: 佛振
+    text_color: 0x2c2ccc
+    back_color: 0xfafafa
+    candidate_text_color: 0x000000
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xfafafa
+    hilited_candidate_text_color: 0xeeeeee
+    hilited_candidate_back_color: 0x444444
+    comment_text_color: 0x808080
