@@ -48,17 +48,17 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-#window-height = 45
-#window-width = 180
-maximize = true
+window-height = 40
+window-width = 160
+#maximize = true
+mouse-hide-while-typing = true
+macos-option-as-alt = true
 font-size = 18
 quit-after-last-window-closed = true
-background-opacity = 0.95
+background-opacity = 0.8
 background-opacity-cells = true
 background-blur = true
 theme = light: Catppuccin Latte, dark: Catppuccin Macchiato
-#macos-titlebar-style = hidden
-
-
-
+macos-window-buttons = hidden
+macos-titlebar-style = transparent
 

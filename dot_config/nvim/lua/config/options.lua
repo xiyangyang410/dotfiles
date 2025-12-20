@@ -18,13 +18,41 @@ if vim.g.neovide then
   vim.api.nvim_set_keymap("v", "<D-v>", "<C-R>+", { noremap = true, silent = true })
 
   -- vim.g.neovide_cursor_vfx_mode = "ripple"
-
+  vim.g.neovide_remember_window_size = true
   vim.g.neovide_floating_corner_radius = 0.3
 
-  vim.g.neovide_opacity = 0.98
-  vim.g.neovide_normal_opacity = 0.95
+  vim.g.neovide_input_macos_option_key_is_meta = "only_left"
+
+  vim.g.neovide_opacity = 0.90
+  vim.g.neovide_normal_opacity = 0.85
+
+  vim.g.neovide_hide_mouse_when_typing = true
 
   vim.g.neovide_theme = "auto"
+
+  local function set_ime(args)
+    if args.event:match("Enter$") then
+      vim.g.neovide_input_ime = true
+    else
+      vim.g.neovide_input_ime = false
+    end
+  end
+
+  local ime_input = vim.api.nvim_create_augroup("ime_input", { clear = true })
+
+  vim.api.nvim_create_autocmd({ "InsertEnter", "InsertLeave" }, {
+    group = ime_input,
+    pattern = "*",
+    callback = set_ime,
+  })
+
+  vim.api.nvim_create_autocmd({ "CmdlineEnter", "CmdlineLeave" }, {
+    group = ime_input,
+    pattern = "[/\\?]",
+    callback = set_ime,
+  })
+
+  vim.g.neovide_window_blurred = true
 
   vim.g.neovide_scale_factor = 1.0
   local change_scale_factor = function(delta)

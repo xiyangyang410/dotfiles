@@ -1,4 +1,9 @@
 patch:
+  app_options:
+    com.mitchellh.ghostty:
+      vim_mode: true
+      ascii_mode: true
+      no_inline: true
   style/candidate_list_layout: linear # stacked | linear
   style/font_face: "霞鹜文楷,Fira Code"
   style/font_point: 36
@@ -10,71 +15,79 @@ patch:
   style/inline_candidate: false
   style/spacing: 0
   style/line_length: 0
-  style/line_spacing: 0
+  style/line_spacing: 10
   style/base_offset: 0
   style/show_paging: true
-  style/corner_radius: 20
-  style/hilited_corner_radius: 18
+  style/corner_radius: 15
+  style/hilited_corner_radius: 14
   style/comment_font_face: "PingFang SC"
   style/comment_font_point: 18
   style/translucency: true
   style/mutual_exclusive: false
-  style/surrounding_extra_expansion: 0 # 候选项背景相对大小？
+  style/surrounding_extra_expansion: 1 # 候选项背景相对大小？
   style/border_height: 0 # 外边框 高
   style/border_width: 0 # 外边框 宽
 
-  style/color_scheme: purity_of_essence_light
-  style/color_scheme_dark: purity_of_form_dark
+  style/color_scheme: catppuccin_latte
+  style/color_scheme_dark: catppuccin_macchiato
 
-  preset_color_schemes/purity_of_form_dark:
-    name: "純粹的形式／Purity of Form Light"
-    author: 雨過之後、佛振
-    # 如果将字体设置为 PingFangSC-Regular
-    # 会让 🈶🈚️🉑🈲🉐 这几个 Emoji 失去彩色效果，留空反而可以显示。。。
-    # font_face: ""                   # 字体及大小
-    # font_point: 18
-    # label_font_face: "Helvetica"    # 序号字体及大小
-    # label_font_point: 12
-    # comment_font_face: "Helvetica"  # 注字体及大小
-    # comment_font_point: 16
-    # candidate_list_layout: stacked        # 候选项排列方向 stacked(默认) | linear
-    # text_orientation: horizontal          # 文字排列方向 horizontal(默认) | vertical
-    # inline_preedit: true                    # 键入码（拼音）是否显示在键入位置 true | false
-    # inline_candidate: false                 # 候选项（词句）是否显示在键入位置 true | false
-    # translucency: true                      # 磨砂： true | false
-    # mutual_exclusive: false                 # 色不叠加： true | false
-    # corner_radius: 10                       # 外边框 圆角半径
-    # hilited_corner_radius: 10               # 选中框 圆角半径
-    surrounding_extra_expansion: 0 # 候选项背景相对大小？
-    # shadow_size: 10                         # 阴影大小
-    # line_spacing: 5                         # 行间距
-    base_offset: 0 # 字基高
-    # alpha: 0.9                              # 透明度，0~1
-    # spacing: 10                            # 拼音与候选项之间的距离 （inline_preedit: false）
-    color_space: srgb # 色彩空间： srgb | display_p3
-    back_color: 0x545554 # 底色
-    hilited_candidate_back_color: 0xE3E3E3 # 选中底色
-    label_color: 0xBBBBBB # 序号颜色
-    hilited_candidate_label_color: 0x4C4C4C # 选中序号颜色
-    candidate_text_color: 0xEEEEEE # 文字颜色
-    hilited_candidate_text_color: 0x000000 # 选中文字颜色
-    comment_text_color: 0x808080 # 注颜色
-    hilited_comment_text_color: 0x808080 # 选中注颜色
-    text_color: 0x808080 # 拼音颜色 （inline_preedit: false）
-    hilited_text_color: 0xEEEEEE # 选中拼音颜色 （inline_preedit: false）
-    # candidate_back_color:                 # 候选项底色
-    # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
-    # hilited_back_color:                   # 选中拼音底色 （inline_preedit: false）
-    # border_color:                         # 外边框颜色
+  preset_color_schemes:
+    catppuccin_latte:
+      name: Catppuccin Latte
 
-  preset_color_schemes/purity_of_essence_light:
-    name: 純粹的本質／Purity of Essence Light
-    author: 佛振
-    text_color: 0x2c2ccc
-    back_color: 0xfafafa
-    candidate_text_color: 0x000000
-    hilited_text_color: 0x000000
-    hilited_back_color: 0xfafafa
-    hilited_candidate_text_color: 0xeeeeee
-    hilited_candidate_back_color: 0x444444
-    comment_text_color: 0x808080
+      back_color: 0xE8E0DC # 候选条背景色 Crust
+      border_color: 0xEFE9E6 # 边框色 Mantle
+      text_color: 0x775F5C # 拼音行文字颜色 Subtext1
+      label_color: 0x856F6C # 预选栏编号颜色 Subtext0
+      candidate_text_color: 0x694F4C # 预选项文字颜色 Text
+      hilited_back_color: 0xef3988 # 第一候选项背景背景色 Mauve
+      hilited_candidate_text_color: 0xF5F1EF # 第一候选项文字颜色 Base
+      hilited_candidate_label_color: 0xDAD0CC # 第一候选项编号颜色 Surface0
+      hilited_text_color: 0xBEB0AC # 高亮拼音 (需要开启内嵌编码) Surface2
+      hilited_comment_text_color: 0xDAD0CC # 注解文字高亮 Surface0
+      comment_text_color: 0xBEB0AC # 拼音等提示�����������������������文字颜色 Surface2
+
+    catppuccin_mocha:
+      name: Catppuccin Mocha
+
+      back_color: 0x1B1111 # 候选条背景色 Crust
+      border_color: 0x251818 # 边框色 Mantle
+      text_color: 0xDEC2BA # 拼音行文字颜色 Subtext1
+      label_color: 0xC8ADA6 # 预选栏编号颜色 Subtext0
+      candidate_text_color: 0xF4D6CD # 预选项文字颜色 Text
+      hilited_back_color: 0xF7A6CB # 第一候选项背景背景色 Mauve
+      hilited_candidate_text_color: 0x2E1E1E # 第一候选项文字颜色 Base
+      hilited_candidate_label_color: 0x443231 # 第一候选项编号颜色 Surface0
+      hilited_text_color: 0x705B58 # 高亮拼音 (需要开启内嵌编码) Surface2
+      hilited_comment_text_color: 0x443231 # 注解文字高亮 Surface0
+      comment_text_color: 0x705B58 # 拼音等提示文字颜色 Surface2
+
+    catppuccin_frappe:
+      name: Catppuccin Frappe
+
+      back_color: 0x342623 # 候选条背景色 Crust
+      border_color: 0x3C2C29 # 边框色 Mantle
+      text_color: 0xE2BFB5 # 拼音行文字颜色 Subtext1
+      label_color: 0xCEADA5 # 预选栏编号颜色 Subtext0
+      candidate_text_color: 0xF5D0C6 # 预选项文字颜色 Text
+      hilited_back_color: 0xE69ECA # 第一候选项景色 Mauve
+      hilited_candidate_text_color: 0x463430 # 第一候选项文字颜色 Base
+      hilited_candidate_label_color: 0x594541 # 第一候选项编号颜色 Surface0
+      hilited_text_color: 0x806862 # 高亮拼音 (需要开启内嵌编码) Surface2
+      hilited_comment_text_color: 0x594541 # 注解文字高亮 Surface0
+      comment_text_color: 0x806862 # 拼音等提示文字颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色颜色 Surface2
+
+    catppuccin_macchiato:
+      name: Catppuccin Macchiato
+
+      back_color: 0x261918 # 候选条背景色 Crust
+      border_color: 0x30201E # 边框色 Mantle
+      text_color: 0xE0C0B8 # 拼音行文字颜色 Subtext1
+      label_color: 0xCBADA5 # 预选栏编号颜色 Subtext0
+      candidate_text_color: 0xF5D3CA # 预选项文字颜色 Text
+      hilited_back_color: 0xF6A0C6 # 第一候选项背景背景色 Mauve
+      hilited_candidate_text_color: 0x3A2724 # 第一候选项文字颜色 Base
+      hilited_candidate_label_color: 0x4F3A36 # 第一候选项编号颜色 Surface0
+      hilited_text_color: 0x70B558 # 高亮拼音 (需要开启内嵌编码) Surface2
+      hilited_comment_text_color: 0x4F3A36 # 注解文字高亮 Surface2
+      comment_text_color: 0x70B558 # 拼音等提示文字颜色 Surface0
